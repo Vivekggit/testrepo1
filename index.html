@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $("#myBtn").click(function(){
+    $("#myModal").modal();
+  });
+
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".boxstyle").filter(function() {
+    console.log($(this).text());
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<style>
+.boxstyle {
+    padding: 0px;
+}
+
+.innerbox {
+    border: 1px solid navy;
+    border-radius: 5px;
+    margin: 3px;
+    padding:7px;
+box-sizing: border-box;
+}
+
+.firstcol {
+display:inline-block;width: 45%;vertical-align: top;
+}
+
+.secondcol {
+display:inline-block;vertical-align: top;
+font-size: 13px;
+    color: darkgreen;
+    width: 53%;
+}
+
+.prodname {
+
+    font-size: 16px;
+    font-weight: 600;
+    font-style: oblique;
+    padding-bottom: 5px;
+    color: chocolate;
+
+}
+
+.historypredictiondiv {
+    font-size: 12px;
+    color: darkblue;
+    font-weight: 600;
+}
+
+.historyprediction {
+    font-size: 12px;
+    color: darkred;
+    font-weight: 600;
+display:inline-block;
+}
+
+.priceinfo {
+ text-align: right;
+    color: #500808;
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 5px;
+}
+
+.priceinfo3 {
+ text-align: right;
+    color: #500808;
+    font-weight: 500;
+    font-size: 14px;
+    padding-right: 5px;
+border-top:1px solid;
+}
+
+.priceinfoonlydiscount {
+ text-align: right;
+    color: #500808;
+    font-weight: 500;
+    font-size: 18px;
+    padding-right: 5px;
+border-top:1px solid;
+}
+
+.pricevalue {
+width: 70px;
+    display: inline-block;
+    font-size: 16px;
+    color: crimson;
+}
+
+.pricevalue3 {
+width: 70px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+   color: crimson;
+}
+ 
+.pricevalueonlydiscount {
+width: 70px;
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 700;
+   color: crimson;
+}
+
+</style>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-color:#575e66!important">
+  <a class="navbar-brand" href="#">Costco coupon and stats</a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" id="myBtn" href="#">About</a>
+    </li>
+  </ul>
+</nav>
+
+<div class="container-fluid">
+
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:10px;">
+          About Costco Stats<button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span></h4>
+        </div>
+        <div class="modal-body" style="padding:10px;">
+         Costco stats helps you to search current and historical version of our favorite costco coupons in easy and convenient way. It also provides the existing of current month coupon based on its last 12 month history and approximate tentative next availablilty.
+<br><br>For questions and feedback, please <a href="mailto:testsstw@sfasfs.com">email us</a><br><br>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+
+
+<br>
+  <input class="form-control" id="myInput" type="text" placeholder="Search..">
+  <br>
+<div class="row" style="
+    margin: -2px;
+">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Chicken Stock</div><div class='firstcol'><img src='v.jpg' style='width: 100%;'></div><div class='secondcol'>Organic chick stock. Health and Natural Item Code 935874 Limit:10<div class='priceinfo'>Warehouse<span class='pricevalue'>50.00$</span></div><div class='priceinfo'>Discount<span class='pricevalue'>6$</span> </div><div class='priceinfo3'>Final<span class='pricevalue3'>44.00$</span></div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-19,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-22</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-19,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-22</span></span></div></div></div>
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Shampoo Pantene</div><div class='firstcol'><img src='q.jpg' style='width: 100%;'></div><div class='secondcol'>DVR Securtiy System with 6 4k Active Deterrence Cameras. Item 1541349. Limit:3<div class='priceinfoonlydiscount'>Discount<span class='pricevalueonlydiscount'>4.99$</span> </div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div></div>
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Dov Soap</div><div class='firstcol'><img src='q.jpg' style='width: 100%;'></div><div class='secondcol'>DVR Securtiy System with 6 4k Active Deterrence Cameras. Item 1541349. Limit:4<div class='priceinfoonlydiscount'>Discount<span class='pricevalueonlydiscount'>6.99$</span> </div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div></div>
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Grapes</div><div class='firstcol'><img src='q.jpg' style='width: 100%;'></div><div class='secondcol'>DVR Securtiy System with 6 4k Active Deterrence Cameras. Item 1541349. Limit:5<div class='priceinfoonlydiscount'>Discount<span class='pricevalueonlydiscount'>3.99$</span> </div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div></div>
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Lux Soap</div><div class='firstcol'><img src='q.jpg' style='width: 100%;'></div><div class='secondcol'>DVR Securtiy System with 6 4k Active Deterrence Cameras. Item 1541349. Limit:3<div class='priceinfo'>Warehouse<span class='pricevalue'>10.99$</span></div><div class='priceinfo'>Discount<span class='pricevalue'>5$</span> </div><div class='priceinfo3'>Final<span class='pricevalue3'>5.99$</span></div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div></div>
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Cinthal Soap</div><div class='firstcol'><img src='q.jpg' style='width: 100%;'></div><div class='secondcol'>DVR Securtiy System with 6 4k Active Deterrence Cameras. Item 1541349. Limit:2<div class='priceinfo'>Warehouse<span class='pricevalue'>9.99$</span></div><div class='priceinfo'>Discount<span class='pricevalue'>4.99$</span> </div><div class='priceinfo3'>Final<span class='pricevalue3'>5.00$</span></div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div></div>
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Coconut Oil</div><div class='firstcol'><img src='q.jpg' style='width: 100%;'></div><div class='secondcol'>DVR Securtiy System with 6 4k Active Deterrence Cameras. Item 1541349. Limit:1<div class='priceinfo'>Warehouse<span class='pricevalue'>125.00$</span></div><div class='priceinfo'>Discount<span class='pricevalue'>10$</span> </div><div class='priceinfo3'>Final<span class='pricevalue3'>115.00$</span></div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div></div>
+<div class='col-lg-3 col-md-6 col-sm-12 boxstyle' ><div class='innerbox'><div class='prodname'>Organic Milk</div><div class='firstcol'><img src='q.jpg' style='width: 100%;'></div><div class='secondcol'>DVR Securtiy System with 6 4k Active Deterrence Cameras. Item 1541349. Limit:3<div class='priceinfo'>Warehouse<span class='pricevalue'>89.00$</span></div><div class='priceinfo'>Discount<span class='pricevalue'>5$</span> </div><div class='priceinfo3'>Final<span class='pricevalue3'>84.00$</span></div><br><br><div class='historypredictiondiv d-none  d-sm-block d-md-block d-lg-none'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div><div class='historypredictiondiv d-sm-none  d-md-none d-lg-block'><span class='historyprediction'>12 month history: &nbsp;</span>Sep-20,Jan-21,May-21.<span class='historyprediction'>Prediction:&nbsp;<span style='color: darkblue;
+'>Oct-21</span></span></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div></div></body></html>
